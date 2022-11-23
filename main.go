@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"log"
+	"net/http"
+
+	"github.com/Gravitalia/AirBack/router"
+)
 
 func main() {
-	fmt.Println("Going to be developed soon")
+	http.HandleFunc("/create/post", router.Post)
+
+	if err := http.ListenAndServe(":8040", nil); err != nil {
+		log.Fatal(err)
+	}
 }
