@@ -1,3 +1,3 @@
-module github.com/Gravitalia/Polymath
+module github.com/Gravitalia/AirBack
 
-go 1.18
+go 1.19
